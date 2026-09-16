@@ -1,10 +1,6 @@
-# Definimos la función que calcula el área de un rectángulo.
-def calcular_area(base, altura):
-    area = base * altura       # Solo existe mientras se ejecuta la función.
-    return area                 # 'return' entrega el valor calculado a quien llamó la función.
-
-# Ejecutamos la función con base=5 y altura=3 para probar si funciona.
-resultado = calcular_area(5, 3)
-print(resultado)                # Imprime: 15
-
-# print(area)                   # Esto daría NameError: 'area' no existe fuera de la función.
+def celsius_a_fahrenheit(c):
+    factor = 9 / 5 # local
+    fahrenheit = c * factor + 32 # local
+    return fahrenheit
+print(celsius_a_fahrenheit(100)) # 212.0
+print(celsius_a_fahrenheit(0)) # 32

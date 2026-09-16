@@ -1,15 +1,22 @@
-# Definimos una fábrica que genera identificadores únicos.
 def generador_id():
-    ultimo_id = 0             # guarda el último ID generado.
-
+    ultimo_id = 0
     def nuevo_id():
-        nonlocal ultimo_id     # 'nonlocal' permite MODIFICAR 'ultimo_id' en cada llamada.
-        ultimo_id += 1         # Incrementamos el contador enclosing.
-        return f"ID-{ultimo_id:04d}"  # 'return' entrega el ID formateado con ceros a la izquierda.
-
-    return nuevo_id            # Devolvemos la función interna (closure) para usarla afuera.
-
-# Creamos un generador y lo llamamos varias veces para ver los IDs generados.
+        nonlocal ultimo_id
+        ultimo_id += 1
+        return f"ID-{ultimo_id:04d}"
+    return nuevo_id
 gen = generador_id()
-print(gen())  # Imprime: ID-0001
-print(gen())  # Imprime: ID-0002
+print(gen()) # ID-0001
+print(gen()) # ID-0002
+print(gen())
+print(gen())
+print(gen())
+print(gen())
+print(gen())
+print(gen())
+print(gen())
+print(gen())
+print(gen())
+print(gen())
+print(gen())
+#Se utilizó nonlocal para modificar una variable de la función externa desde una función interna.
